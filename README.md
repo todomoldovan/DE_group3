@@ -1,4 +1,1 @@
-# Data Engineering I
-# 1TD069
-# 7,5 hp
-# Group 3
+# 1TD069 - Data Engineering I - 7,5 hp - Group 3
