@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  worker1:
+    image: test:v0
+    command: /bin/bash -c "hadoop-3.3.6/bin/hdfs --daemon start datanode && /usr/local/spark/sbin/start-worker.sh spark://192.168.2.219:7077"
+    expose:
+      - "8888"
+      - "8080"
+      - "7077"
+      - "9000"
+    network_mode: "host"
+    deploy: 
+    volumes:
+      - /home/ubuntu/Drive:/Drive
+
+  worker2:
+    image: test:v0
+    command: /bin/bash -c "/usr/local/spark/sbin/start-worker.sh spark://192.168.2.219:7077"
+    expose:
+      - "8888"
+      - "8080"
+      - "7077"
+      - "9000"
+    network_mode: "host"
+    volumes:
+      - /home/ubuntu/Drive:/Drive

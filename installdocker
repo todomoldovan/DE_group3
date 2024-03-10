@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo apt install docker.io -y
+sudo apt install docker-compose -y
+cd dockerstuff/dockerfile
+sudo docker image build --tag workerimage:v0 .
