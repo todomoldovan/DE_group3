@@ -1,0 +1,53 @@
+version: "2.4"
+services:
+  worker1:
+    image: project:v0
+    command: /bin/bash -c "usr/local/spark/sbin/start-worker.sh spark://192.168.2.62:7077"
+    expose:
+      - "8888"
+      - "8080"
+      - "7077"
+      - "9000"
+      - "9001"
+    volumes:
+      - /home/ubuntu/Drive:/Drive
+    mem_limit: 1600M
+
+  worker2:
+    image: project:v0
+    command: /bin/bash -c "usr/local/spark/sbin/start-worker.sh spark://192.168.2.62:7077"
+    expose:
+      - "8888"
+      - "8080"
+      - "7077"
+      - "9000"
+      - "9001"
+    volumes:
+      - /home/ubuntu/Drive:/Drive
+    mem_limit: 1600M
+
+  worker3:
+    image: project:v0
+    command: /bin/bash -c "usr/local/spark/sbin/start-worker.sh spark://192.168.2.62:7077"
+    expose:
+      - "8888"
+      - "8080"
+      - "7077"
+      - "9000"
+      - "9001"
+    volumes:
+      - /home/ubuntu/Drive:/Drive
+    mem_limit: 1600M
+
+  worker4:
+    image: project:v0
+    command: /bin/bash -c "usr/local/spark/sbin/start-worker.sh spark://192.168.2.62:7077"
+    expose:
+      - "8888"
+      - "8080"
+      - "7077"
+      - "9000"
+      - "9001"
+    volumes:
+      - /home/ubuntu/Drive:/Drive
+    mem_limit: 1600M
