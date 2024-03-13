@@ -19,7 +19,7 @@
 <configuration>
 <property>
 <name>dfs.data.dir</name>
-<value>/Drive/dn</value>
+<value>/dn</value>
 </property>
 </configuration>
 

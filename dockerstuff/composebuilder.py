@@ -8,10 +8,11 @@ services:"""
         docker_compose_content += f"""
   worker{i}:
     image: project:v0
-    command: /bin/bash -c "usr/local/spark/sbin/start-worker.sh spark://192.168.2.62:7077"
+    command: /bin/bash -c "hadoop-3.3.6/bin/hdfs --daemon start datanode && usr/local/spark/sbin/start-worker.sh spark://192.168.2.62:7077"
     expose:
-      - "8888"
-      - "8080"
+      - "50010"
+      - "9866"
+      - "9867"
       - "7077"
       - "9000"
       - "9001"
